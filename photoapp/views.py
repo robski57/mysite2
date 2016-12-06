@@ -1,6 +1,30 @@
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
+from django.http import HttpResponse
+# from .twitterApi import searchTwitter
+from .wikipediaApi import summary
+
+class HomeView(TemplateView):
+    template_name = 'home.html'
 
 def index(request):
     return render(request, 'photoapp/home.html')
 
-# Create your views here.
+def contact(request):
+    return render(request, 'photoapp/basic.html',{'content':['If you would like to contact me, please email me','robski577@gmail.com']})
+
+def search(request):
+    return render(request, 'header.html')
+
+# def Tweet(request):
+#     query = request.GET.get('search')
+#     if query:
+#         twts = searchTwitter(query)
+#     # tweets = showTweets(getTweets(), tweet())
+#     return render(request, 'photoapp/Post.html', {'twts': twts})
+
+def summaryArticle(request):
+    query = request.GET.get('search')
+    if query:
+        sum = summary(query)
+        return render(request, 'photoapp/Post.html', {'sum': sum})
