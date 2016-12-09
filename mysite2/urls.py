@@ -19,7 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     # url(r'^review/', include('review.urls')),
     # url(r'^gallary/', include('gallary.urls')),
-    url(r'^photoapp/', include('photoapp.urls')),
+    url(r'^', include('photoapp.urls')),
     # url(r'^wikipediaapi/', include('wikipediaapi.urls')),
     url(r'^admin/', admin.site.urls),
 ]
