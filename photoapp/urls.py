@@ -7,7 +7,7 @@ urlpatterns = [
     #url(r'^review/', views.review, name='review'),
     #url(r'^gallary/', views.gallary, name='gallary'),
     url(r'^$', views.HomeView.as_view(), name='home'),
-    # url(r'^', views.Tweet, name='tweets'),
+    url(r'^', views.Tweet, name='tweets'),
     url(r'^', views.summaryArticle, name='search'),
 
     

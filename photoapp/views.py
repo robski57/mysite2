@@ -17,17 +17,14 @@ def contact(request):
 def search(request):
     return render(request, 'header.html')
 
-# def Tweet(request):
-#     query = request.GET.get('search')
-#     if query:
-#         twts = searchTwitter(query)
-#     # tweets = showTweets(getTweets(), tweet())
-#     return render(request, 'photoapp/Post.html', {'twts': twts})
+def Tweet(request):
+    query = request.GET.get('search')
+    if query:
+        twts = searchTwitter(query)
+        return render(request, 'photoapp/Post.html', {'twts': twts})
 
 def summaryArticle(request):
     query = request.GET.get('search')
     if query:
-        sum = searchTwitter(query)
-
-
+        sum = summary(query)
         return render(request, 'photoapp/Post.html', {'sum': sum})

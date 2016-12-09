@@ -9,16 +9,25 @@
 
 <h2>Summary:</h2>
     <ol>
-        {% for summary in sum['Tweet'] %}
+        {% for summary in sum %}
         <li>
-            {{ summary['User'] }}
-            {{ summary['Text'] }}
-
+            {{ summary }}
         </li>
-        {% endblock %}
+        {% endfor %}
     </ol>
 
 <h1>Tweets:</h1>
+
+<ol>
+        {% if twts %}
+            var twt = {{ twts }}
+        <!--<li>-->
+            <!--{{ tweets }}-->
+
+
+        <!--</li>-->
+        {% endif %}
+    </ol>
 
 </body>
 </html>
