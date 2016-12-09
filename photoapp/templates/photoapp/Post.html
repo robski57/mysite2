@@ -9,11 +9,13 @@
 
 <h2>Summary:</h2>
     <ol>
-        {% for summary in sum %}
+        {% for summary in sum['Tweet'] %}
         <li>
-            {{ summary }}
+            {{ summary['User'] }}
+            {{ summary['Text'] }}
+
         </li>
-        {% endfor %}
+        {% endblock %}
     </ol>
 
 <h1>Tweets:</h1>
