@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^', views.Tweet, name='tweets'),
     url(r'^', views.summaryArticle, name='search'),
 
+
     
 ]

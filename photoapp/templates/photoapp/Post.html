@@ -19,14 +19,12 @@
 <h1>Tweets:</h1>
 
 <ol>
-        {% if twts %}
-            var twt = {{ twts }}
+        {% for twt in twts %}
+            {{ twts }}
         <!--<li>-->
             <!--{{ tweets }}-->
-
-
         <!--</li>-->
-        {% endif %}
+        {% endfor %}
     </ol>
 
 </body>
