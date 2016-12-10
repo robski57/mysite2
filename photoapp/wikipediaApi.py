@@ -1,4 +1,4 @@
-import wikipedia
+from wikipedia import *
 def summary(article):
     summary_list = []
     if article is None:

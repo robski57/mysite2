@@ -10,14 +10,15 @@ t = Twitter(
 #t.statuses.update(
  #status="Using @Robski5777 sweet Python Twitter Tools.")
 
-def showTweets():
-    tweets_list = []
-    if tweets_list is None:
-        tweets_list = tweet.random()
-    if tweets_list is not None:
-        summary = tweet.summary(tweet)
-        tweets_list.append(summary)
-    return  tweets_list
+def showTweets(x, num):
+
+    for i in range(0, num):
+        line1 = (x[i]['user']['screen_name'])
+        line2 = (x[i]['text'])
+        line1 + "\n" + line2 + "\n\n"
+
+        return x
+
 
 def getTweets():
     x = t.statuses.home_timeline(screen_name="RobertWilliamsJr")
@@ -65,10 +66,10 @@ def searchTwitter(query):
 
 numberOfTweets = 10
 
-#if __name__== "__main__":
-#    test = input("Enter Key Word: ")
-#    tweet_search = searchTwitter(test)
-#    pprint.pprint(tweet_search, indent= 4)
+if __name__== "__main__":
+    test = input("Enter Key Word: ")
+    tweet_search = searchTwitter(test)
+    pprint.pprint(tweet_search, indent= 4)
 
 
 
