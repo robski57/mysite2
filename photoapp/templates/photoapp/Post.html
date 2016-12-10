@@ -13,6 +13,9 @@
         <li>
             {{ summary['User'] }}
             {{ summary['Text'] }}
+            {% for tweet in sum.Tweet %}
+                <p>{{ tweet.User }} - {{ tweet.Text }}</p>
+            {% endfor %}
 
         </li>
         {% endblock %}

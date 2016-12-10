@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.http import HttpResponse
-from .wikipediaApi import summary
+#from django.http import HttpResponse
+#from .wikipediaApi import summary
 from .twitterApi import searchTwitter
 
 class HomeView(TemplateView):
@@ -16,12 +16,12 @@ def contact(request):
 def search(request):
     return render(request, 'header.html')
 
-def tweetArticle(request):
-    query = request.GET.get('search')
-    if query:
-        sums = searchTwitter(query)
+#def tweetArticle(request):
+ #   query = request.GET.get('search')
+  #  if query:
+   #     sums = searchTwitter(query)
 
-    return render(request, 'photoapp/Post.html', {'sums': sums})
+    #return render(request, 'photoapp/Post.html', {'sums': sums})
 
 def summaryArticle(request):
     query = request.GET.get('search')
