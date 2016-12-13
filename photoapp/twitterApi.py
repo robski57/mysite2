@@ -2,7 +2,7 @@ from twitter import *
 from tkinter import *
 import json
 import pprint
-
+# t is assign to the keys needed to use twitter
 t = Twitter(
     auth=OAuth('805338356326563841-qrbTYHwhSyUY5HFiJ4IzTn4fostBgFz','qGDgTnRhce89hLrDdaQKa8Voeigu85kPA22VzAAgYgbuf',
                'ZlmrsEGVpvCU21Jk9YRQxA45p','9wxvAq4MpV4eRCcsqhpfmGMpMQOKrSqxN2NZ36VuQ1LikvGOKB'))
@@ -10,6 +10,8 @@ t = Twitter(
 #t.statuses.update(
  #status="Using @Robski5777 sweet Python Twitter Tools.")
 
+
+#showTweets,  on line 1 pulls the user screen name and line 2 pulls the text message they sent.
 def showTweets(x, num):
 
     for i in range(0, num):
@@ -19,7 +21,7 @@ def showTweets(x, num):
 
         return x
 
-
+# getTweets show the org timeline by using the user name and returning x
 def getTweets():
     x = t.statuses.home_timeline(screen_name="RobertWilliamsJr")
     return x
@@ -38,9 +40,10 @@ def tweet():
 
     return numberOfTweets
 
+#searchTwitter creats a query and pulls tweet.
 def searchTwitter(query):
     tweets_list = []
-
+    #search for tweet data
     tweet_Data = t.search.tweets(q=query,
                              count=3,
                              lang="en")
@@ -65,7 +68,7 @@ def searchTwitter(query):
 
 
 numberOfTweets = 10
-
+#testing phase
 if __name__== "__main__":
     test = input("Enter Key Word: ")
     tweet_search = searchTwitter(test)
