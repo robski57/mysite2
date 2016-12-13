@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<h1>Article Summary</h1>
+
+<h2>Summary:</h2>
+    <ol>
+        {% for summary in sum %}
+        <li>
+            {{ summary }}
+        </li>
+        {% endfor %}
+    </ol>
+
+<h1>Tweets:</h1>
+
+<ol>
+        {% for twt in twts %}
+            {{ twts }}
+        <!--<li>-->
+            <!--{{ tweets }}-->
+        <!--</li>-->
+        {% endfor %}
+    </ol>
+
+</body>
+</html>
